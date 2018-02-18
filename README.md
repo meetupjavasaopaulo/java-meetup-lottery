@@ -5,8 +5,7 @@ Java Meetup lottery engine
 2. Overwrite src/main/resources/meetup.xml with this file
 3. Fire up application with:
 
-mvn spring-boot:run
+## mvn spring-boot:run
 
 
-![alt home](https://raw.githubusercontent.com/meetupjavasaopaulo/java-meetup-lottery
-/doc/home.png)
+![alt home](https://raw.githubusercontent.com/meetupjavasaopaulo/java-meetup-lottery/master/doc/home.png)
