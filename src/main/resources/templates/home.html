@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+ <title>Java Meetup SP Lottery</title>
+ <div th:replace="/fragments/header :: header-css"/>
+</head>
+<body>
+<div th:replace="/fragments/header :: header"/>
+<div class="container">
+ <div class="starter-template">
+  <div id="host"></div>
+  <div id="time"></div>
+  <table id="statusTable" class="table table-hover table-bordered table-striped"><tbody></tbody></table>
+  <table id="fsTable" class="table table-hover table-bordered table-striped"><tbody></tbody></table>
+ </div>
+    <img th:src="@{lotto.png}" width="200"/>
+	<h1 layout:fragment="header">
+	 Winner (<b th:text="${lottery}">0</b>): 
+	</h1>
+	<h2 th:text="${winner}"></h2>
+	<h1 layout:fragment="header">Guest list (<b th:text="${size}">0</b>)</h1>
+	<div layout:fragment="content" class="container">
+		<table class="table table-bordered table-striped">
+			<tbody>
+				<tr th:if="${guests.empty}">
+					<td colspan="3">No guests</td>
+				</tr>
+				<tr th:each="guest : ${guests}">
+					<td th:text="${guest}">name</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<div th:replace="/fragments/footer :: footer"/>
+</body>
+</html>
