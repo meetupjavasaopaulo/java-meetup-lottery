@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+ <title>Java Meetup SP Lottery</title>
+ <div th:replace="/fragments/header :: header-css"/>
+</head>
+<body>
+<div th:replace="/fragments/header :: header"/>
+<div class="container">
+ <div class="starter-template">
+  <div id="host"></div>
+  <div id="time"></div>
+  <table id="statusTable" class="table table-hover table-bordered table-striped"><tbody></tbody></table>
+  <table id="fsTable" class="table table-hover table-bordered table-striped"><tbody></tbody></table>
+ </div>
+ <div class="row">
+  <div class="col-sm-10">
+    <h2>Junte-se a nós!</h2>
+	<h3><img th:src="@{meetup-logo.png}" width="100"/> https://www.meetup.com/Sao-Paulo-Java-Meetup/</h3>
+	<h3><img th:src="@{slack.png}" width="100"/> https://javameetup.slack.com</h3> 
+	<h3><img th:src="@{facebook.png}" width="100"/>  https://www.facebook.com/MeetupJavaSaoPaulo/</h3> 
+	<h3><img th:src="@{twitter.png}" width="100"/> https://twitter.com/JavaMeetupSampa</h3> 
+	<h3><img th:src="@{youtube.png}" width="100"/>https://www.youtube.com/channel/UCjQtPPwMApg6mjEX-6wiXwA</h3> 
+	<h3><img th:src="@{github.png}" width="100"/>https://github.com/meetupjavasaopaulo</h3> 
+	<h3><img th:src="@{line.png}" width="100"/> https://line.do/ww/java-meetup-sao-paulo/20hu/vertical </h3> 
+  </div>
+  <div class="col-sm-2">
+   <img th:src="@{meetup.jpg}" width="500"/>
+  </div>
+</div> 
+
+</div>
+<div th:replace="/fragments/footer :: footer"/>
+</body>
+</html>
