@@ -36,7 +36,7 @@ public class HomeController {
 
 			System.out.println("Stream size: " + guests.size());
 
-			lottery = RandomUtil.getRandomNumberInRange(0, guests.size());
+			lottery = RandomUtil.getRandomNumberInRange(0, guests.size()-1);
 			winner = guests.get(lottery);
 
 			System.out.println("Winner: " + winner);

@@ -1,16 +1,18 @@
 package com.meetupjavasaopaulo.lottery;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
+import org.junit.Assert ;
+
 public class JavaMeetupLotteryApplicationTests {
 
 	@Test
-	public void contextLoads() {
+	public void testRandom() {
+		
+		for (int a=0;a<100000;a++) {
+			Assert.assertTrue(RandomUtil.getRandomNumberInRange(0, a*10+1)>=0);
+		}
+		
 	}
 
 }
