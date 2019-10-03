@@ -14,10 +14,17 @@
   <table id="fsTable" class="table table-hover table-bordered table-striped"><tbody></tbody></table>
  </div>
     <img th:src="@{lotto.png}" width="200"/>
+	<form method="POST" th:action="@{/reset}">
+		<button type="submit" name="submit" value="value" class="link-button">Restart Lottery</button>
+	</form>
+	<form method="POST" th:action="@{/random}">
+		<button type="submit" name="submit" value="value" class="link-button">New Winner</button>
+	</form>
 	<h1 layout:fragment="header">
 	 Winner (<b th:text="${lottery}">0</b>): 
 	</h1>
 	<h2 th:text="${winner}"></h2>
+	<h1 layout:fragment="header">Guests Remaining (<b th:text="${remaining}">0</b>)</h1>
 	<h1 layout:fragment="header">Guest list (<b th:text="${size}">0</b>)</h1>
 	<div layout:fragment="content" class="container">
 		<table class="table table-bordered table-striped">
@@ -28,6 +35,19 @@
 				<tr th:each="guest : ${guests}">
 					<td th:text="${guest}">name</td>
 				</tr>
+			</tbody>
+		</table>
+	</div>
+	<h1 layout:fragment="header">Winners list (<b th:text="${winners.size()}">0</b>)</h1>
+	<div layout:fragment="content" class="container">
+		<table class="table table-bordered table-striped">
+			<tbody>
+			<tr th:if="${winners.empty}">
+				<td colspan="3">No winners</td>
+			</tr>
+			<tr th:each="winnerStored : ${winners}">
+				<td th:text="${winnerStored}">name</td>
+			</tr>
 			</tbody>
 		</table>
 	</div>
