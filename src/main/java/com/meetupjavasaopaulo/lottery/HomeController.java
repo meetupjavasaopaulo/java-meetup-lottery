@@ -16,7 +16,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HomeController {
-
+	
+	private static ArrayList<String> winningNumbers = new ArrayList<int>();
+	
 	@Value("classpath:meetup.xls")
 	private Resource res;
 
@@ -36,7 +38,11 @@ public class HomeController {
 
 			System.out.println("Stream size: " + guests.size());
 
-			lottery = RandomUtil.getRandomNumberInRange(0, guests.size()-1);
+			do{
+				lottery = RandomUtil.getRandomNumberInRange(0, guests.size()-1);
+			}while(winningNumbers.contains(lottery));
+				
+			winningNumbers.add(lottery);
 			winner = guests.get(lottery);
 
 			System.out.println("Winner: " + winner);
