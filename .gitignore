@@ -27,6 +27,6 @@ hs_err_pid*
 .mvn
 target
 
-#Idea files
+# Idea files
 .idea
 *.iml

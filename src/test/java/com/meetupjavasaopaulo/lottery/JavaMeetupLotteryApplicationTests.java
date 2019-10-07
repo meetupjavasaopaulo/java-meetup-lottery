@@ -1,5 +1,6 @@
 package com.meetupjavasaopaulo.lottery;
 
+import com.meetupjavasaopaulo.lottery.util.RandomUtil;
 import org.junit.Test;
 
 import org.junit.Assert ;

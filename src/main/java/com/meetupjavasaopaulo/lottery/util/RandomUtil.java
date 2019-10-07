@@ -1,4 +1,4 @@
-package com.meetupjavasaopaulo.lottery;
+package com.meetupjavasaopaulo.lottery.util;
 
 import java.util.Random;
 
